@@ -5,9 +5,21 @@
 .tb-head{
     width: 100%;
 }
-table th{
+table th td{
     text-align: center;
 }
 .number-oder{
     width: 10%;
+}
+.stick{
+    width: 20px;
+    height: 20px;
+    border: 1px solid;
+    border-radius: 50%;
+    background-color: red;
+    cursor: pointer;
+    margin: 0 auto;
+    &:hover{
+        box-shadow:   2px 5px 5px #888888;
+    }
 }

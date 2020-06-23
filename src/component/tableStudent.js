@@ -1,6 +1,7 @@
-import React from "react";
-import "./tableStudent.scss"
-export default function tableStudent() {
+import React,{useState} from "react";
+import "./tableStudent.scss" 
+const TableStudent = () => {
+  const [redCheck, setRedcheck] = useState(false);
   return (
     <div className="col-11 wrap-tb card-body">
       <div className="table-responsive">
@@ -11,7 +12,6 @@ export default function tableStudent() {
               <th scope="col">fullName</th>
               <th scope="col">studenID</th>
               <th scope="col">day one</th>
-              <th scope="col">totaday</th>
               <th scope="col">percent</th>
             </tr>
           </thead>
@@ -20,7 +20,12 @@ export default function tableStudent() {
               <th scope="row">1</th>
               <td>Mark</td>
               <td>Otto</td>
-              <td>@mdo</td>
+              <td>
+                <div className="stick" 
+                      onClick={ () => setRedcheck(!redCheck)}
+                      style={{backgroundColor: redCheck ? "red" : "green"}}
+                />
+              </td>
             </tr>
             <tr>
               <th scope="row">2</th>
@@ -40,3 +45,4 @@ export default function tableStudent() {
     </div>
   );
 }
+  export default  TableStudent;

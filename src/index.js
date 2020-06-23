@@ -3,15 +3,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import {BrowserRouter as Router} from 'react-router-dom';
-import {ProductProvider} from "./Context";
+import {AppProvider} from "./AppContext";
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-  <ProductProvider>
+  <AppProvider>
     <Router>
         <App />
     </Router>  
-  </ProductProvider>
+  </AppProvider>
   , 
     document.getElementById('root'));
 
